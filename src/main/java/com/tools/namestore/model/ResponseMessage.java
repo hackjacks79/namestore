@@ -1,14 +1,13 @@
 package com.tools.namestore.model;
 
+import lombok.Data;
+
+@Data
 public class ResponseMessage {
     private String message;
-    public ResponseMessage(String message) {
+    private StorageInfo blobInfo;
+    public ResponseMessage(String message,StorageInfo blobInfo) {
         this.message = message;
-    }
-    public String getMessage() {
-        return message;
-    }
-    public void setMessage(String message) {
-        this.message = message;
+        this.blobInfo = blobInfo;
     }
 }
